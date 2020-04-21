@@ -1,0 +1,28 @@
+{
+  "name": "tamagachibot",
+  "version": "1.0.0",
+  "description": "tamagachi discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steve1442/tamagachi-bot.git"
+  },
+  "keywords": [
+    "tamagachi",
+    "discord",
+    "node"
+  ],
+  "author": "Steve keller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steve1442/tamagachi-bot/issues"
+  },
+  "homepage": "https://github.com/steve1442/tamagachi-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0"
+  }
+}
