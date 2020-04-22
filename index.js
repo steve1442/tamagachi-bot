@@ -16,14 +16,17 @@ class Tamagachi{
         this.energy -= 10;
         this.food -= 2;
         this.happiness += 40;
+        return "you played with ur tamagachi";
     }
 
     feed(){
         this.food = 100;
+        return "you tamagachi has been fed";
     }
     sleep(){
         this.energy = 100;
         this.happiness += 5;
+        return "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
     }
 
     died(){
@@ -81,13 +84,13 @@ client.on('message', msg =>{
 	        );
         }
         else if(content.startsWith('feed')){
-            test.feed();
+            msg.channel.send(test.feed());
         }
         else if(content.startsWith('sleep')){
-            test.sleep();
+            msg.channel.send(test.sleep());
         }
         else if(content.startsWith('play')){
-            test.play();
+            msg.channel.send(test.play());
         }
         else if(content.startsWith('help')){
             msg.channel.send(new discord.MessageEmbed()
