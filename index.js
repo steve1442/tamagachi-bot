@@ -23,6 +23,12 @@ class Tamagachi{
     }
 
     balance(){
+        if(this.food  <= 0|| this.energy <= 0 || this.happiness <= 0){
+            this.health -= 20;
+        }
+        else if(this.food  >= 70 && this.energy >= 70 && this.happiness >= 70){
+            this.health += 20;
+        }
         if(this.food > 100){
             this.food = 100;
         }
@@ -37,9 +43,6 @@ class Tamagachi{
         }
         if(this.health <= 0){
             this.died();
-        }
-        if(this.food  <= 0|| this.energy <= 0 || this.happiness <= 0){
-            this.health -= 20;
         }
     }
 
@@ -110,7 +113,7 @@ client.on('ready', ()=>{
     console.log(tamagchis);
     console.log(`logged in as ${client.user.tag}!`);
     client.user.setActivity("!help");
-    setInterval(update, /*1800000*/1000);
+    setInterval(update, 1800000);
 
 
 
